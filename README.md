@@ -24,7 +24,7 @@ The logic is simple. Your program should connect to a broker, wait for payload o
 
 [Mini-38KHz-IR-Infrared-Transmitter-Module-IR-Infrared-Receiver-Sensor-Module](https://sea.banggood.com/Mini-38KHz-IR-Infrared-Transmitter-Module-IR-Infrared-Receiver-Sensor-Module-For-Arduino-RPI-STM32-p-1066428.html)
 
-![](/home/minhaz/ESP32AirCon/img/esp32s.jpg)
+![ESP32-Development-Board](img/esp32s.jpg)
 
 [ESP32-Development-Board](https://sea.banggood.com/ESP32-Development-Board-WiFibluetooth-Ultra-Low-Power-Consumption-Dual-Cores-ESP-32-ESP-32S-Board-p-1109512.html)
 
