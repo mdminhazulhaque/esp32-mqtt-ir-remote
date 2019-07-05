@@ -30,7 +30,7 @@ The logic is simple. Your program should connect to a broker, wait for payload o
 
 ## Dependencies
 
-* Arduino (with Espressif SDK)
+* [Arduino](https://www.arduino.cc/en/Main/Software) (with [Espressif SDK](https://github.com/espressif/arduino-esp32#installation-instructions))
 * VCP Driver (Only for [Windows](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)/[MacOSX](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip))
 * [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266.git) - Send and receive infrared signals with multiple protocols (ESP8266)
 * [EspMQTTClient](https://github.com/plapointe6/EspMQTTClient) - A library that provides a wifi and MQTT connection to an ESP8266/ESP32
