@@ -4,17 +4,17 @@ A simplest remote IR application that can turn on your aircon (or other devices)
 
 ## How To
 
-Let's break the whole system into several parts so you can understand each segment clearly.
+Let's break the whole system into 3 small parts so you can understand each segment clearly.
 
-### Learn Signals
+### 1. Learn Signals
 
 This MQTT IR Remote thing needs to learn the IR signal that comes from the remote control unit of the specific aircon model. For this purpose, I used an Infrared Receiver as hardware and used the sketch `IRremoteESP8266/Examples/IRrecvDemo.ino`. Burn this sketch and open serial console. The program will wait for signals through its IR receiver. Just press the ON button of your aircon remote control and point it to the receiver. You are supposed to see some raw data printed on the serial console. Just copy the stream for future use.
 
-### Send Signals
+### 2. Send Signals
 
 IR signals can be sent easily via `IRremoveESP8266` library. They have a class named `IRsend`. You can bind this with any GPIO pin and send signals. But wait! Don't loose hope when your aircon does not respond for the command sent by your program. The reason could be the IR transmitter uses 3.3V which makes the IR signal less powerful to reach the aircon's sensor.
 
-### Send Signals on MQTT Messages
+### 3. Send Signals on MQTT Messages
 
 The logic is simple. Your program should connect to a broker, wait for payload on a certain topic, when received send a signal to the IR transmitter.
 
