@@ -6,9 +6,9 @@ A simplest remote IR application that can turn on your aircon (or other devices)
 
 Let's break the whole system into 3 small parts so you can understand each segment clearly.
 
-### 1. Learn Signals
+### 1. Dump Signals
 
-This MQTT IR Remote thing needs to learn the IR signal that comes from the remote control unit of the specific aircon model. For this purpose, I used an Infrared Receiver as hardware and used the sketch `IRremoteESP8266/Examples/IRrecvDemo.ino`. Burn this sketch and open serial console. The program will wait for signals through its IR receiver. Just press the ON button of your aircon remote control and point it to the receiver. You are supposed to see some raw data printed on the serial console. Just copy the stream for future use.
+This MQTT IR Remote thing needs to dump the IR signal that comes from the remote control unit of the specific aircon model. For this purpose, I used an Infrared Receiver as hardware and used the sketch `IRremoteESP8266/Examples/IRrecvDemo.ino`. Burn this sketch and open serial console. The program will wait for signals through its IR receiver. Just press the ON button of your aircon remote control and point it to the receiver. You are supposed to see some raw data printed on the serial console. Just copy the stream for future use.
 
 ### 2. Send Signals
 
@@ -30,9 +30,11 @@ The logic is simple. Your program should connect to a broker, wait for payload o
 
 ## Dependencies
 
-[IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266.git) - Send and receive infrared signals with multiple protocols (ESP8266)
-[EspMQTTClient](https://github.com/plapointe6/EspMQTTClient) - A library that provides a wifi and MQTT connection to an ESP8266/ESP32
-[PubSubClient](https://github.com/knolleary/pubsubclient.git) - A MQTT 3.1.1 supported client library for Intel Galileo/Edison, ESP8266 and TI CC3000
+* Arduino (with Espressif SDK)
+* VCP Driver (Only for [Windows](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)/[MacOSX](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip))
+* [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266.git) - Send and receive infrared signals with multiple protocols (ESP8266)
+* [EspMQTTClient](https://github.com/plapointe6/EspMQTTClient) - A library that provides a wifi and MQTT connection to an ESP8266/ESP32
+* [PubSubClient](https://github.com/knolleary/pubsubclient.git) - A MQTT 3.1.1 supported client library for Intel Galileo/Edison, ESP8266 and TI CC3000
 
 ## Diagram
 
