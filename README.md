@@ -16,7 +16,9 @@ IR signals can be sent easily via `IRremoveESP8266` library. They have a class n
 
 ### 3. Send Signals on MQTT Messages
 
-The logic is simple. Your program should connect to a broker, wait for payload on a certain topic, when received send a signal to the IR transmitter.
+The logic is simple. Your program should connect to a broker, wait for payload on a certain topic, when received send a signal to the IR transmitter. The [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.thn.iotmqttdashboard) has some nice UI and feature to convert button press/slider event into MQTT message and publish to specific topic.
+
+![MQTT Dashboard](img/mqtt_app.jpg)
 
 ## ✨ Hardwares
 
